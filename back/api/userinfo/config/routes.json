@@ -1,0 +1,57 @@
+{
+  "routes": {
+    "GET /userinfo": {
+      "controller": "Userinfo",
+      "action": "find",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "GET /userinfo/:id": {
+      "controller": "Userinfo",
+      "action": "findOne",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /userinfo": {
+      "controller": "Userinfo",
+      "action": "create",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "PUT /userinfo/:id": {
+      "controller": "Userinfo",
+      "action": "update",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    },
+    "DELETE /userinfo/:id": {
+      "controller": "Userinfo",
+      "action": "destroy",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /userinfo/:parentId/:relation": {
+      "controller": "Userinfo",
+      "action": "add",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "DELETE /userinfo/:parentId/:relation/:id": {
+      "controller": "Userinfo",
+      "action": "remove",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    }
+  }
+}

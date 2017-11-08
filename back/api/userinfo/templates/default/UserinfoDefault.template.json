@@ -1,0 +1,11 @@
+{
+  "default": {
+    "attributes": {
+      "twitchId": {},
+      "isStreamer": {
+        "required": true
+      }
+    },
+    "displayedAttribute": "id"
+  }
+}

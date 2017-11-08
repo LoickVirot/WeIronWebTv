@@ -1,0 +1,43 @@
+{
+  "identity": "userinfo",
+  "connection": "default",
+  "defaultTemplate": "default",
+  "displayedAttribute": "",
+  "schema": true,
+  "attributes": {
+    "twitchId": {
+      "type": "string"
+    },
+    "isStreamer": {
+      "type": "boolean"
+    },
+    "account": {
+      "model": "user",
+      "via": "info"
+    },
+    "lang": {
+      "type": "string",
+      "required": true
+    },
+    "template": {
+      "type": "string",
+      "required": true
+    },
+    "id_ref": {
+      "type": "int"
+    }
+  },
+  "autoCreatedAt": true,
+  "autoUpdatedAt": true,
+  "migrate": "alter",
+  "templates": {
+    "default": {
+      "attributes": {
+        "twitchId": {
+          "type": "string"
+        }
+      },
+      "displayedAttribute": "twitchid"
+    }
+  }
+}
